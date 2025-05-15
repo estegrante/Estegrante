@@ -1,0 +1,125 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #e6f5ec, #f9fff9);
+    font-family: 'Montserrat', sans-serif;
+
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+    display: flex;
+    list-style: none;
+}
+/* Стили для навигации */
+ul li a {
+    text-decoration: none;
+    padding: 12px 18px;
+    color: #017143;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: #e6f5ec;
+}
+
+ul li a:hover {
+    background-color: #017143;
+    color: white;
+    box-shadow: 0 4px 12px rgba(1, 113, 67, 0.3);
+}
+
+/* Стили для круглого фона */
+.circle {
+    position: absolute;
+    right: -200px;   /* <- сдвигаем на 200px за экран */
+    bottom: -200px;  /* <- и вниз тоже немного */
+    width: 400px;
+    height: 400px;
+    background: #017143;  /* Цвет Starbucks */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Эффект для аватара */
+.ava {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    border-radius: 20px;
+    box-shadow: -5px -5px 10px;
+}
+
+.content{
+    position: relative;
+    left: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+.content .textbox{
+    position: relative;
+    max-width: 500px;
+}
+.content .textbox h2{
+    color: black;
+    font-size: 3em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+.content .textbox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    text-decoration: none;
+    background-color:green ;
+    color: white;
+    font-weight: 500;
+    border-radius: 40px;
+}
+
+.content .textbox {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.textbox ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+.textbox ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    list-style-type: "✓ ";
+}
+.content .textbox a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.content .textbox a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 128, 0, 0.4);
+}
+@keyframes fade {
+    0% {opacity: 1; transform: translateY(0);}
+    100% {opacity: 0; transform: translateY(-40px);}
+  }

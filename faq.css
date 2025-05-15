@@ -1,0 +1,167 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e6f5ec, #f9fff9);
+    padding: 30px;
+    margin: 0;
+    animation: fadePage 0.8s ease-in;
+  }
+  
+  .faq-container {
+    max-width: 700px;
+    margin: auto;
+    background: #f0fff4;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 128, 0, 0.15);
+    animation: fadeIn 1s ease;
+  }
+  
+  .faq-container h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+  
+  .faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px 0;
+    position: relative;
+    padding: 12px 15px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1);
+    transition: background 0.3s;
+  }
+  
+  .faq-question:hover {
+    background: #e8f5e9;
+  }
+  
+  .faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    color: #2e7d32;
+    transition: transform 0.3s;
+  }
+  
+  .faq-item.active .faq-question::after {
+    content: "-";
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #444;
+    transition: max-height 0.5s ease, padding 0.5s;
+  }
+  
+  .faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 15px;
+    background: #f6fff8;
+    border-left: 4px solid #43a047;
+    border-radius: 0 0 12px 12px;
+    margin-top: -10px;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+.ava{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    border-radius: 20px;
+    box-shadow: -5px -5px 10px;
+}
+.circle {
+    position: absolute;
+    right: -200px;   /* <- сдвигаем на 200px за экран */
+    bottom: -100px;  /* <- и вниз тоже немного */
+    width: 400px;
+    height: 400px;
+    background: #017143;  /* Цвет Starbucks */
+    border-radius: 50%;
+    z-index: -1;
+}  
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+    display: flex;
+    list-style: none;
+}
+ul li a {
+  text-decoration: none;
+  padding: 12px 18px;
+  color: #017143;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  background-color: #e6f5ec;
+}
+
+ul li a:hover {
+  background-color: #017143;
+  color: white;
+  box-shadow: 0 4px 12px rgba(1, 113, 67, 0.3);
+}
+.faq-item {
+  animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.faq-container h2 {
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.faq-container h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 10px auto 0;
+  background: #43a047;
+  border-radius: 2px;
+}
+@keyframes fadePage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fade {
+  0% {opacity: 1; transform: translateY(0);}
+  100% {opacity: 0; transform: translateY(-40px);}
+}

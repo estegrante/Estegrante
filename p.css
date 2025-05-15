@@ -1,0 +1,125 @@
+html {
+    scroll-behavior: smooth;    
+}
+
+body{
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: linear-gradient(to right, #e6f5ec, #f9fff9);
+
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+    display: flex;
+    list-style: none;
+}
+ul li a {
+    text-decoration: none;
+    padding: 12px 18px;
+    color: #017143;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    background-color: #e6f5ec;
+}
+
+ul li a:hover {
+    background-color: #017143;
+    color: white;
+    box-shadow: 0 4px 12px rgba(1, 113, 67, 0.3);
+}
+.content{
+    position: relative;
+    left: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+}
+.content .textbox{
+    position: relative;
+    max-width: 500px;
+}
+.content .textbox h2{
+    color: black;
+    font-size: 3em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+.content .textbox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    text-decoration: none;
+    background-color:green ;
+    color: white;
+    font-weight: 500;
+    border-radius: 40px;
+}
+.ava{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    border-radius: 20px;
+    box-shadow: -5px -5px 10px;
+}
+.circle {
+    position: absolute;
+    right: -200px;   /* <- сдвигаем на 200px за экран */
+    bottom: -200px;  /* <- и вниз тоже немного */
+    width: 400px;
+    height: 400px;
+    background: #017143;  /* Цвет Starbucks */
+    border-radius: 50%;
+    z-index: -1;
+}  
+section {
+    width: 100%; /* секция занимает всю ширину */
+    display: flex;
+    flex-wrap: wrap; /* можно переносить, если понадобится */
+    justify-content: center; /* выравнивание по центру */
+    margin-top: 50px; /* небольшой отступ сверху */
+}
+.price {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавная анимация */
+    display: inline-block;
+    color: black;
+}
+
+/* Когда наводишь курсор */
+.price:hover {
+    transform: translateY(-10px) scale(1.05); /* Сдвиг вверх и увеличение */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Увеличиваем тень */
+}
+a {
+    text-decoration: none; /* Убираем подчеркивание с ссылок */
+}
+.price {
+    opacity: 0; /* Начальная непрозрачность */
+    animation: fadeIn 0.8s forwards; /* Анимация появления */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Плавно становится видимой */
+    }
+}
+@keyframes fade {
+    0% {opacity: 1; transform: translateY(0);}
+    100% {opacity: 0; transform: translateY(-40px);}
+  }
